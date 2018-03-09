@@ -1,0 +1,21 @@
+import java.util.*; 
+import java.io.*;
+
+public class MyFirstClass {  
+  public static StringBuilder FirstReverse(String str) { 
+	  
+	  StringBuilder input = new StringBuilder();
+	  input.append(str);
+	  input = input.reverse();
+	  return input;    
+  } 
+  
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner s = new Scanner(System.in);
+    System.out.print(FirstReverse(s.nextLine())); 
+  }   
+  
+}
+
+
