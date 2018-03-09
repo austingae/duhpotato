@@ -1,0 +1,24 @@
+import java.util.*; 
+import java.io.*;
+
+public class MyFirstClass {  
+  public static int FirstFactorial(int num) { 
+	  int arrayNum[] = new int[num]; // 0 1 2 3 
+	  int total = 1;
+	  for(int i = 0; i < arrayNum.length;i++) // 1 2 3 4
+	  {
+		  int a = arrayNum[i] = i+1;
+		  total = total * a;
+	  }
+       
+    return total;
+    
+  } 
+  
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner s = new Scanner(System.in);
+    System.out.print(FirstFactorial(s.nextInt())); 
+  }   
+  
+}
