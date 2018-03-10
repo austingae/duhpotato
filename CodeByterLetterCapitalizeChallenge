@@ -1,0 +1,24 @@
+import java.util.*; 
+import java.io.*;
+public class MyFirstClass {  
+  public static String LetterCapitalize(String str) { 
+	  String sArray[] = str.split(" ");
+	  String modified = "";
+	  for(int i = 0; i < sArray.length;i++)
+	  {
+		  //Capitalizes the first letter of every word.
+		  String output = sArray[i].substring(0,1).toUpperCase()+sArray[i].substring(1);
+		  //Adds modified output into the modified string
+		  modified = modified + output + " ";
+	  }
+	  
+	  return modified;
+  }
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner s = new Scanner(System.in);
+    System.out.print(LetterCapitalize(s.nextLine())); 
+  }   
+  
+}
+
