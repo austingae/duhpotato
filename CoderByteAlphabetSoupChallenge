@@ -1,0 +1,29 @@
+import java.util.*; 
+import java.io.*;
+import java.util.Arrays;
+public class MyFirstClass {  
+  public static String AlphabetSoup(String str) { 
+    char cArray[] = str.toCharArray();
+    String modifiedString = "";
+    Arrays.sort(cArray);
+    for(int i = 0; i < str.length();i++)
+    {
+    		modifiedString +=cArray[i];
+    }
+    return modifiedString;
+    
+  } 
+  
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner s = new Scanner(System.in);
+    System.out.print(AlphabetSoup(s.nextLine())); 
+  }   
+  
+}
+
+
+
+
+
+
