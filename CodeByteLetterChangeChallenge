@@ -1,0 +1,38 @@
+import java.util.*; 
+import java.io.*;
+
+class MyFirstClass {  
+  public static String LetterChanges(String str) { 
+	  String modifiedString = "";
+	  String vowelChangeString;
+	  
+	  
+	  for(int i = 0; i < str.length();i++)
+	  {
+		  //Moves one letter to the right
+		  if(str.charAt(i) > 96 && str.charAt(i)<122)
+		  {
+			  modifiedString = modifiedString + (char)(str.charAt(i)+1);
+		  //If char is "z", moves it to "a"
+		  }else if(str.charAt(i) == 122)
+		  {
+			  modifiedString = modifiedString + (char)(97);
+		  }else
+		  {
+			  modifiedString = modifiedString + (char)(str.charAt(i));
+		  }
+	  }
+	  //Change all vowel letters to upperCase letters
+	  vowelChangeString = modifiedString.replaceAll("a", "A").replaceAll("e", "E").replaceAll("i", "I").replaceAll("o", "O").replaceAll("u", "U");
+	  
+	  return vowelChangeString;
+    
+  } 
+  
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner s = new Scanner(System.in);
+    System.out.print(LetterChanges(s.nextLine())); 
+  }   
+  
+}
