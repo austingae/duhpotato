@@ -1,0 +1,23 @@
+import java.util.*; 
+import java.io.*;
+
+public class MyFirstClass {  
+  public static String TimeConvert(int num) { 
+	  int hour = 0;
+	  int minute = 0;
+	  hour = num/60;
+	  minute = num%60;
+       
+    return Integer.toString(hour) + ":"+Integer.toString(minute);
+    
+  } 
+  
+
+
+public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner s = new Scanner(System.in);
+    System.out.print(TimeConvert(s.nextInt())); 
+  }   
+  
+}
