@@ -1,0 +1,25 @@
+import java.util.*; 
+import java.io.*;
+
+public class MyFirstClass {  
+  public static int SimpleAdding(int num) {
+	  int nArray[] = new int[num];
+	  int total = 0;
+	  for(int i = 0; i < nArray.length;i++)
+	  {
+		  int num1 = (nArray[i] = i+1);
+		  total = total + num1;
+	  }
+	  return total;
+    
+  } 
+  
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner s = new Scanner(System.in);
+    System.out.print(SimpleAdding(s.nextInt())); 
+  }   
+  
+}
+
+
