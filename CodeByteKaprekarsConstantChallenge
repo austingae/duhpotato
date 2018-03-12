@@ -1,0 +1,31 @@
+import java.util.*; 
+import java.io.*;
+
+public class MyFirstClass {  
+  public static int KaprekarsConstant(int num) { 
+	  int counter = 0;
+	  
+	  while(num !=6174)
+	  {
+		  char[] numDigits = (""+num).toCharArray();
+		  Arrays.sort(numDigits);
+		  int biggerNum = Integer.parseInt(new StringBuilder(String.valueOf(numDigits)).reverse().toString());
+		  int smallerNum = Integer.parseInt(String.valueOf(numDigits));
+		  
+		  counter++;
+	  }
+	return counter;
+  }
+  
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner s = new Scanner(System.in);
+    System.out.print(KaprekarsConstant(s.nextInt())); 
+    
+  }   
+  
+}
+
+
+
+
