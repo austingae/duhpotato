@@ -1,0 +1,38 @@
+import java.util.*; 
+import java.io.*;
+import java.util.Scanner;
+public class MyFirstClass {  
+	
+  public static String isAnagram(String a, String b) {
+	  int totalA = 0;
+	  int totalB = 0;
+	  for(int i = 0; i<a.length();i++)
+	  {
+		  totalA = totalA + (int)(a.charAt(i));
+	  }
+	  for(int i = 0; i<b.length();i++)
+	  {
+		  totalB = totalB + (int)(b.charAt(i));
+	  }
+	  if(totalA == totalB)
+	  {
+		  return "Anagrams";
+	  }else {
+		  return "Not Anagrams";
+	  }
+  }
+
+  public static void main (String[] args) {  
+    // keep this function call here
+	  Scanner input = new Scanner(System.in);
+	  System.out.println(isAnagram(input.nextLine(), input.nextLine()));
+  }
+
+//my Plan
+  //Turn the Strings into chars
+  // turn the chars into their ascii numbers
+  // add the ascii numbers for both strings
+  //if a ==b -> return true or else return false
+
+}
+
