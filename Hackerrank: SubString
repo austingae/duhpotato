@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class MyFirstClass {
+	public static String subString(String word, int start, int end)
+	{
+		StringBuilder sb = new StringBuilder(word);
+		String modifiedString = sb.substring(start,end);
+		return modifiedString;
+		
+	}
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Type in a word and two numbers (start and end)");
+        System.out.println(MyFirstClass.subString(input.next(), input.nextInt(), input.nextInt()));
+        
+    }
+}
